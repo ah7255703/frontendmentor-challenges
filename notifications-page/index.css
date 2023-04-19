@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+.avatar {
+  @apply w-[40px] h-[40px] rounded-full overflow-hidden flex-shrink-0;
+}
+
+.avatar img {
+  @apply w-full aspect-square object-cover h-full;
+}
+
+@font-face {
+  font-family: Plus;
+  src: url("./assets/fonts/PlusJakartaSans-VariableFont_wght.ttf");
+}
+
+body {
+  font-family: Plus;
+}
+
+.noti-card {
+  @apply flex flex-row gap-2 items-start w-full p-2  rounded-lg;
+}
+.noti-card .noti-main h2 {
+  @apply font-bold text-sm inline text-black;
+}
+.noti-card .noti-main p {
+  @apply inline text-gray-500 text-sm;
+}
+.noti-card .noti-main span {
+  @apply block text-gray-400 text-xs;
+}
+
+.noti-card.--red .noti-main p {
+    @apply after:w-2 after:h-2 after:rounded-full after:ms-0.5 after:bg-red-500 after:inline-block;
+}
+.noti-card.--red{
+    @apply bg-blue-100;
+}
+
+span.hover{
+    @apply hover:text-blue-500  font-semibold inline cursor-pointer;
+}
